@@ -49,6 +49,7 @@ namespace Backend_Angular_Crud_Operation
                         .AllowAnyMethod();
                     });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

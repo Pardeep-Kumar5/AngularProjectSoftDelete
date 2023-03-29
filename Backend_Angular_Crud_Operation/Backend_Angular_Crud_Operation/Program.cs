@@ -21,6 +21,10 @@ namespace Backend_Angular_Crud_Operation
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+
                 });
+
     }
+
+
 }

@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace Backend_Angular_Crud_Operation.Controllers
@@ -31,17 +33,23 @@ namespace Backend_Angular_Crud_Operation.Controllers
         {
             return _context.students.FirstOrDefault(s => s.Id == id && !s.IsDelete);
         }
-       
+
         [HttpPost]
-        public IActionResult SaveStudent([FromBody]Student Student)
-        { 
+
+        public IActionResult SaveStudent([FromBody] Student Student)
+        {
+           
+
             _context.students.Add(Student);
             _context.SaveChanges();
             return Ok(Student);
         }
+    
         [HttpPut]
+    
         public IActionResult UpdateStudent(int id,[FromBody] Student student)
         {
+
             if (student != null)
             {
                 _context.students.Update(student);

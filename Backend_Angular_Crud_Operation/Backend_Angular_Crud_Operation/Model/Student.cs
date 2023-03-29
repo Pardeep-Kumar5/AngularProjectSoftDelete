@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,5 +14,9 @@ namespace Backend_Angular_Crud_Operation.Model
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public bool IsDelete { get; set; }
+   
+        public string Image { get; set; }
+        
+
     }
 }

@@ -7,16 +7,20 @@ import { Student } from '../student';
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.scss']
 })
+// const file = event.target.files[0];
+
 export class StudentComponent {
   studentlist:Student[]=[];
   newStudent:Student=new Student();
   editStudent:Student=new Student();
+  
   constructor(private studservice:StudentService){}
+  
   ngOnInit()
   {
     this.Getall();
   }
-
+ 
   Getall()
   {
     this.studservice.getStudent().subscribe(
@@ -29,7 +33,6 @@ export class StudentComponent {
       }
     );
   }
-
   Save(){
     
     this.studservice.postStudent(this.newStudent).subscribe(

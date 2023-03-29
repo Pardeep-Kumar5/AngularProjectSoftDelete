@@ -5985,11 +5985,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Office_Task\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation.csproj",
+      "projectUniqueName": "D:\\Office Task\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation.csproj",
       "projectName": "Backend_Angular_Crud_Operation",
-      "projectPath": "D:\\Office_Task\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation.csproj",
+      "projectPath": "D:\\Office Task\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Office_Task\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation\\obj\\",
+      "outputPath": "D:\\Office Task\\Backend_Angular_Crud_Operation\\Backend_Angular_Crud_Operation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
