@@ -1,6 +1,4 @@
 using Backend_Angular_Crud_Operation.Data;
-using Backend_Angular_Crud_Operation.Repository;
-using Backend_Angular_Crud_Operation.Repository.IRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

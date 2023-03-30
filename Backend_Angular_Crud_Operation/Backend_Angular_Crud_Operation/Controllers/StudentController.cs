@@ -1,6 +1,5 @@
 ﻿using Backend_Angular_Crud_Operation.Data;
 using Backend_Angular_Crud_Operation.Model;
-using Backend_Angular_Crud_Operation.Repository.IRepository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,6 +25,7 @@ namespace Backend_Angular_Crud_Operation.Controllers
         [HttpGet]
         public IEnumerable<Student> Get()
         {
+           
             return _context.students.Where(s => !s.IsDelete);
         }
         [HttpGet("{id:int}")]
