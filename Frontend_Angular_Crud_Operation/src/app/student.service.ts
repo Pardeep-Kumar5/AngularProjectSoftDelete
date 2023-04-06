@@ -28,6 +28,8 @@ export class StudentService {
       console.error('Error saving image', error);
     });
   }
+ 
+ 
   getStudent():Observable<any>
   {
     return this.httpclient.get<any>('https://localhost:44388/api/Student')

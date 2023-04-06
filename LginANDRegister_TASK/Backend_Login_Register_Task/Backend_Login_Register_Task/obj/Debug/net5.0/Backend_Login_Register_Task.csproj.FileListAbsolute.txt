@@ -69,4 +69,4 @@ D:\Office Task\LginANDRegister_TASK\Backend_Login_Register_Task\Backend_Login_Re
 D:\Office Task\LginANDRegister_TASK\Backend_Login_Register_Task\Backend_Login_Register_Task\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 D:\Office Task\LginANDRegister_TASK\Backend_Login_Register_Task\Backend_Login_Register_Task\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 D:\Office Task\LginANDRegister_TASK\Backend_Login_Register_Task\Backend_Login_Register_Task\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
-D:\Office Task\LginANDRegister_TASK\Backend_Login_Register_Task\Backend_Login_Register_Task\obj\Debug\net5.0\Backend_Login_Register_Task.csprojAssemblyReference.cache
+D:\Office Task\LginANDRegister_TASK\Backend_Login_Register_Task\Backend_Login_Register_Task\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll

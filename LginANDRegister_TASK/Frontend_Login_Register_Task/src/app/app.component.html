@@ -15,10 +15,18 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="employee">Employee </a>
           </li>
-       
+          
       </ul>
+   
     </div>
+    <a routerLink="register"  class="btn btn-outline-success my-2 my-sm-0">Register</a>
+
+
+      <button *ngIf="loginservice.currentUserName !=''" (click)="LogoutClick()"
+     class="btn btn-outline-success my-2 my-sm-0">LogOut</button>
+      <a routerLink="login" *ngIf="loginservice.currentUserName ==''" class="btn btn-outline-success my-2 my-sm-0">login</a>
+
   </nav>
   <div>
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>

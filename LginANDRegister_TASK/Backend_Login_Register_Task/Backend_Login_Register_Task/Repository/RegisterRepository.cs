@@ -25,9 +25,9 @@ namespace Backend_Login_Register_Task.Repository
          
 
         }
-        public Register Authenticate(string UserName, string Password)
+        public Register Authenticate(string UserName, string password)
         {
-            var UserIndb = _context.Registers.FirstOrDefault(r=>r.Username == UserName && r.Password == Password);
+            var UserIndb = _context.Registers.FirstOrDefault(r=>r.Username == UserName );
             if (UserIndb == null) return null;
 
             //Jwt Token
@@ -38,7 +38,7 @@ namespace Backend_Login_Register_Task.Repository
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, UserIndb.Id.ToString()),
+                    //new Claim(ClaimTypes.Name, UserIndb.Id.ToString()),
                    
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),

@@ -2,6 +2,8 @@ using Backend_Login_Register_Task.Data;
 using Backend_Login_Register_Task.DTOMapping;
 using Backend_Login_Register_Task.Repository;
 using Backend_Login_Register_Task.Repository.IRepository;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,6 +46,7 @@ namespace Backend_Login_Register_Task
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOption>();
             services.AddScoped<IRegisterRepository, RegisterRepository>();
             services.AddScoped<IEncryptionRepository, EncryptionRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             //JWt Authentication
             var AppSettingSection = Configuration.GetSection("Appsetting");
@@ -68,13 +71,32 @@ namespace Backend_Login_Register_Task
                 };
             });
 
+            services.AddControllers();
          
+
+
+            //services.AddAuthentication().AddGoogle(option =>
+            //{
+            //    option.ClientId = "751737151287-paofm1bd14rkk7mopijg991keil4ssb1.apps.googleusercontent.com";
+            //    option.ClientSecret = "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";
+            //});
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Backend_Login_Register_Task", Version = "v1" });
             });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "My Police",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200")
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+          });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -86,11 +108,12 @@ namespace Backend_Login_Register_Task
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend_Login_Register_Task v1"));
             }
+            app.UseAuthentication();
 
+            app.UseCors("My Police");
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

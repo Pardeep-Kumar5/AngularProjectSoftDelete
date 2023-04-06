@@ -14,5 +14,6 @@ namespace Backend_Login_Register_Task.Data
 
         }
         public DbSet<Register> Registers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }

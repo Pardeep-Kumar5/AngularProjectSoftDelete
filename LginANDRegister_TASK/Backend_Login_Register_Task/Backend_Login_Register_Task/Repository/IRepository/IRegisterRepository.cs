@@ -9,7 +9,7 @@ namespace Backend_Login_Register_Task.Repository.IRepository
    public interface IRegisterRepository
     {
         bool IsUniqueUser(string UserName);
-        Register Authenticate(string UserName, String Password);
+        Register Authenticate(string UserName,string password);
         Register Register(string UserName, string UserPassword);
     }
 }

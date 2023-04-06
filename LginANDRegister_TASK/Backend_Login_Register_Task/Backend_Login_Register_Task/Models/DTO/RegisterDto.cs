@@ -10,6 +10,7 @@ namespace Backend_Login_Register_Task.Models.DTO
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+         public string ConfirmPassword { get; set; }
       
     }
 }
